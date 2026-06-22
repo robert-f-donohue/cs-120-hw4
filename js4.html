@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 4</title>
+</head>
+<body>
+<h1>Problem 4</h1>
+
+<div id="output"></div>
+
+<script>
+    function count(numbers, value) {
+        let total = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] < value) {
+                total++;
+            }
+        }
+
+        return total;
+    }
+
+    function testCount() {
+        let numbers = [3, 55, 30, 28, 9, 12];
+        let value = 10;
+
+        let result = count(numbers, value);
+
+        document.getElementById("output").innerHTML =
+            "There are " + result + " numbers less than " + value + ".";
+    }
+
+    testCount();
+</script>
+</body>
+</html>

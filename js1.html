@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 1</title>
+</head>
+<body>
+<h1>Problem 1</h1>
+
+<div id="output"></div>
+
+<script>
+    let firstName = prompt("What is your first name?");
+    let lastName = prompt("What is your last name?");
+
+    alert("Your name is " + firstName + " " + lastName);
+
+    let children = Number(prompt("How many children do you have?"));
+
+    let message;
+
+    if (children === 0) {
+        message = "You have no children.";
+    } else if (children === 1) {
+        message = "You have 1 child.";
+    } else {
+        message = "You have " + children + " children.";
+    }
+
+    document.getElementById("output").innerHTML = message;
+</script>
+</body>
+</html>

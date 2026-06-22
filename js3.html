@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 3</title>
+</head>
+<body>
+<h1>Problem 3</h1>
+
+<div id="output"></div>
+
+<script>
+    let start = Number(prompt("Enter the first number in the range:"));
+    let end = Number(prompt("Enter the second number in the range:"));
+
+    let smaller;
+    let larger;
+
+    if (start < end) {
+        smaller = start;
+        larger = end;
+    } else {
+        smaller = end;
+        larger = start;
+    }
+
+    let oddNumbers = "";
+    let sum = 0;
+
+    for (let i = smaller; i <= larger; i++) {
+        if (i % 2 !== 0) {
+            oddNumbers += i + " ";
+        }
+
+        sum += i;
+    }
+
+    document.getElementById("output").innerHTML =
+        "<p>Odd numbers in the range: " + oddNumbers + "</p>" +
+        "<p>Sum of all numbers in the range: " + sum + "</p>";
+</script>
+</body>
+</html>
